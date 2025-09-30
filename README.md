@@ -1,2 +1,4 @@
-# Ying119988.github.io
-Pàgina web de Yingqing Li de  l'institut Pompeu Fabra de la matèria de Digitalització, entre altres farem cerca d'informació amb ChatGPT i Google acadèmic per comprovar els limitacions dels llenguatges.
+# bootstrap5
+Aquesta és una plantilla web en català amb menú desplegable, icones Font Awesome diferenciades, mode clar i fosc, i disseny responsiu per mòbil i ordinador utilitzant Bootstrap 5.3.8.
+
+index.html pel cus 2025-2026
