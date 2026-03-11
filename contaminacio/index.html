@@ -58,6 +58,29 @@
         height: 50px;
       }
     }
+    
+main img {
+  display: block;       /* Evita que les imatges flotin al costat del text */
+  max-width: 100%;      /* S'adapta al contenidor sense trencar el disseny */
+  height: auto;         /* Manté la proporció de l'imatge */
+  margin: 1.5rem auto;  /* Espai superior i inferior, centrat automàticament */
+  border-radius: 8px;   /* Esquinas suaus, opcional */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Lliure d’ombra subtil per ressaltar */
+}
+
+/* Millora de l'espai entre llistes i seccions */
+main ul li {
+  margin-bottom: 1rem;
+}
+
+/* Separació entre títols i imatges */
+main h2 + img,
+main h3 + img,
+main h4 + img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
   </style>
 </head>
 <body data-bs-theme="light">
