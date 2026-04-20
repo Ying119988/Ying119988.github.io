@@ -244,10 +244,10 @@
                 r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}} 
                 \]
                 \[
-                r_{\text{NO}_2,\text{incid}}(0) = 0.368 \quad (p < 0.0001,\; \text{significatiu ***})
+                r_{\text{NO}_2,\text{incid}}(0) = 0.085 \quad (p < 0.0001,\; \text{significatiu ***})
                 \]
             </div>
-            <p><strong>Interpretació:</strong> Existeix una correlació positiva moderada i altament significativa. A major concentració de NO₂, tendeix a augmentar la incidència diària d'infeccions respiratòries. El valor \(r=0.368\) explica aproximadament un \(13.5\%\) de la variabilitat compartida.</p>
+            <p><strong>Interpretació:</strong> Existeix una correlació positiva moderada i altament significativa. A major concentració de NO₂, tendeix a augmentar la incidència diària d'infeccions respiratòries. El valor \(r=0.085\) explica aproximadament un \(3.85\%\) de la variabilitat compartida.</p>
         </div>
 
         <!-- PAS 2 -->
@@ -255,22 +255,22 @@
             <div class="step-header"><span class="step-num">2</span><span style="font-size: 1.4rem; font-weight: 600;">Indicadors de risc (RR, AR, AR%)</span></div>
             <p>Dividim els dies segons si el NO₂ supera el valor guia diari de l'OMS (25 µg/m³):</p>
             <ul style="margin: 15px 0 15px 30px;">
-                <li>🔴 <strong>Exposició alta</strong> (NO₂ > 25): 3107 dies, incidència mitjana = \(1.60\) casos/1000</li>
-                <li>🟢 <strong>Exposició baixa</strong> (NO₂ ≤ 25): 1930 dies, incidència mitjana = \(1.38\) casos/1000</li>
+                <li>🔴 <strong>Exposició alta</strong> (NO₂ > 25): 1278 dies, incidència mitjana = \(1.85\) casos/1000</li>
+                <li>🟢 <strong>Exposició baixa</strong> (NO₂ ≤ 25): 3466 dies, incidència mitjana = \(1.77\) casos/1000</li>
             </ul>
             <div class="formula-block">
                 \[
-                RR = \frac{I_{\text{exposats}}}{I_{\text{no exposats}}} = \frac{1.60}{1.38} \approx 1.159
+                RR = \frac{I_{\text{exposats}}}{I_{\text{no exposats}}} = \frac{1.85}{1.77} \approx 1.0452
                 \]
                 \[
-                AR = I_{\text{exposats}} - I_{\text{no exposats}} = 1.60 - 1.38 = 0.22 \text{ casos/1000}
+                AR = I_{\text{exposats}} - I_{\text{no exposats}} = 1.85 - 1.77 = 0.08 \text{ casos/1000}
                 \]
                 \[
-                AR\% = \frac{AR}{I_{\text{exposats}}} \times 100 = \frac{0.22}{1.60} \times 100 \approx 13.75\%
+                AR\% = \frac{AR}{I_{\text{exposats}}} \times 100 = \frac{0.08}{1.85} \times 100 \approx 3.85\%
                 \]
             </div>
-            <p>Interval de confiança del 95% per al RR: \([1.14,\,1.17]\), \(p<0.001\).</p>
-            <p><strong>Conclusió:</strong> RR > 1 indica un efecte nociu. El 13.5% de la incidència en dies amb NO₂ elevat és atribuïble a la superació del límit OMS. Això equival a un excés de 0.22 casos per cada 1000 habitants i dia.</p>
+            <p>Interval de confiança del 95% per al RR: \([1.03,\,1.06]\), \(p<0.001\).</p>
+            <p><strong>Conclusió:</strong> RR > 1 indica un efecte nociu. El 3.85% de la incidència en dies amb NO₂ elevat és atribuïble a la superació del límit OMS. Això equival a un excés de 0.08 casos per cada 1000 habitants i dia.</p>
         </div>
 
         <!-- PAS 3 -->
@@ -279,8 +279,8 @@
             <p>La correlació es calcula desplaçant la sèrie de contaminant \(k\) dies respecte a la incidència. Per a NO₂ i NOX tenim:</p>
             <table>
                 <tr><th>Contaminant</th><th>Lag 0</th><th>Lag 1</th><th>Lag 2</th><th>Lag 3</th></tr>
-                <tr><td>NO₂</td><td>0.368***</td><td>0.352***</td><td>0.310***</td><td>0.273***</td></tr>
-                <tr><td>NOX</td><td>0.411***</td><td>0.385***</td><td>0.340***</td><td>0.298***</td></tr>
+                <tr><td>NO₂</td><td>0.085***</td><td>0.052***</td><td>0.067***</td><td>0.098***</td></tr>
+                <tr><td>NOX</td><td>0.120***</td><td>0.089***</td><td>0.096***</td><td>0.129***</td></tr>
             </table>
             <p class="small-mono" style="margin-top: 8px;">(*** p < 0.001)</p>
             <div class="formula-block">
@@ -297,28 +297,28 @@
             <p>El sistema ha detectat 15 pics (incidència > percentil 99). La majoria es concentren al <strong>gener de 2022</strong>, coincidint amb valors alts de NO₂ (entre 32 i 51 µg/m³).</p>
             <table>
                 <tr><th>Data</th><th>Incidència</th><th>NO₂ (µg/m³)</th><th>Alerta</th></tr>
-                <tr><td>2022-01-17</td><td>5.27</td><td>35.4</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-19</td><td>4.37</td><td>41.9</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-10</td><td>4.36</td><td>46.1</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-24</td><td>4.26</td><td>40.4</td><td>⚠️ HIGH PEAK</td></tr>
-                <tr><td>2022-01-18</td><td>3.94</td><td>43.2</td><td>⚠️ HIGH PEAK</td></tr>
+                <tr><td>2022-01-03</td><td>3.25</td><td>22</td><td>⚠️ HIGH PEAK</td></tr>
+                <tr><td>2022-01-09</td><td>3.377</td><td>10</td><td>⚠️ HIGH PEAK</td></tr>
+                <tr><td>2022-01-11</td><td>3.08</td><td>38</td><td>⚠️ HIGH PEAK</td></tr>
+                <tr><td>2022-01-17</td><td>3.09</td><td>18</td><td>⚠️ HIGH PEAK</td></tr>
+                <tr><td>2022-01-20</td><td>2.96</td><td>46</td><td>⚠️ HIGH PEAK</td></tr>
                 <tr><td>...</td><td>...</td><td>...</td><td></td></tr>
             </table>
-            <p>En aquests episodis la incidència multiplica per 3,5 la mitjana. Aplicant la fracció atribuïble, es pot estimar l'excés de casos:</p>
+            <p>En aquests episodis la incidència multiplica per 3,15 la mitjana. Aplicant la fracció atribuïble, es pot estimar l'excés de casos:</p>
             <div class="formula-block">
                 \[
                 \text{Excés diari} = (\text{incidència pic} - \text{incidència basal}) \times \frac{\text{població}}{1000}
                 \]
             </div>
-            <p>Per a Pallejà (~28.000 habitants), un pic de 5.27 suposa unes \( (5.27-1.38)\times 28 \approx 109 \) consultes extra aquell dia. Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
+            <p>Per a Pallejà (~12.000 habitants), un pic de 5.27 suposa unes \( (5.27-1.38)\times 28 \approx 109 \) consultes extra aquell dia. Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
         </div>
 
         <!-- PAS 5 -->
         <div class="step">
-            <div class="step-header"><span class="step-num">5</span><span style="font-size: 1.4rem; font-weight: 600;">Tendències temporals (2012-2025)</span></div>
+            <div class="step-header"><span class="step-num">5</span><span style="font-size: 1.4rem; font-weight: 600;">Tendències temporals (2011-2025)</span></div>
             <p>L'anàlisi de tendència mostra una lleugera reducció de la incidència mitjana a partir de 2020, possiblement per millores en la qualitat de l'aire i canvis en mobilitat. No obstant això, els hiverns continuen presentant pics associats a NO₂ elevat.</p>
             <div style="display: flex; gap: 20px; justify-content: space-around; background: #e2eee7; border-radius: 24px; padding: 16px;">
-                <div><strong>2012-2019</strong><br>Incid. mitjana ≈ 1.58</div>
+                <div><strong>2011-2019</strong><br>Incid. mitjana ≈ 1.58</div>
                 <div><strong>2020-2025</strong><br>Incid. mitjana ≈ 1.42</div>
                 <div><strong>Reducció</strong><br>≈ 10%</div>
             </div>
@@ -332,7 +332,7 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
                 <p>✔️ <strong>Associació significativa:</strong> \(r = 0.368\) (NO₂) i RR = 1.16.<br>
-                ✔️ <strong>Fracció atribuïble:</strong> 13.5% de la incidència en dies contaminants.<br>
+                ✔️ <strong>Fracció atribuïble:</strong> 3.85% de la incidència en dies contaminants.<br>
                 ✔️ <strong>Efecte agut:</strong> màxima correlació a lag 0-1.<br>
                 ✔️ <strong>Pics d'alerta:</strong> gener 2022, amb incidències >5 per 1000.</p>
             </div>
@@ -343,7 +343,7 @@
         <hr style="margin: 24px 0 12px; border-top: 2px solid #bdd6ca;">
         <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
             <span style="background: #1b4e3f; color: white; padding: 6px 24px; border-radius: 60px;">📍 Dades reals processades · Pallejà</span>
-            <span class="badge">🌫️ NO₂ · PM · O₃ · SO₂ · 5108 dies</span>
+            <span class="badge">🌫️ NO₂ · NO · NOX · SO₂ · 5108 dies</span>
             <span style="margin-left: auto; font-style: italic;">Anàlisi estil OMS · Educatiu</span>
         </div>
         <p class="footnote" style="margin-top: 18px;">
