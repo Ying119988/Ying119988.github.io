@@ -219,7 +219,19 @@
             <span><strong>SO₂</strong> 1.5 µg/m³ <span class="exceed">0 > 40</span></span>
         </div>
         <p class="footnote" style="margin-top: 0;">* Dies amb registre: NO₂ 4863, NO 4861, NOX 3684, SO₂ 4847</p>
-        
+        <h3>🌫️ Freqüència de superació del límit OMS</h3>
+
+<p>El NO₂ supera el límit recomanat per l'OMS (25 µg/m³) en molts dies del període analitzat.</p>
+
+<div class="formula-block">
+\[
+\frac{1278}{4744} = 0.269 \approx 26.9\%
+\]
+</div>
+
+<p>Això significa que el <strong>26.9% dels dies</strong> superen el límit recomanat.</p>
+
+<p>En canvi, el límit legal de la UE (50 µg/m³) només es supera en 16 dies en 14 anys.</p>
         <div style="background: #faf7e6; padding: 16px 22px; border-radius: 24px; margin: 24px 0 8px;">
             <strong>📌 Preguntes del problema (a resoldre):</strong>
             <ol style="margin-top: 12px; padding-left: 28px;">
@@ -272,7 +284,17 @@
             <p>Interval de confiança del 95% per al RR: \([1.03,\,1.06]\), \(p<0.001\).</p>
             <p><strong>Conclusió:</strong> RR > 1 indica un efecte nociu. El 3.85% de la incidència en dies amb NO₂ elevat és atribuïble a la superació del límit OMS. Això equival a un excés de 0.08 casos per cada 1000 habitants i dia.</p>
         </div>
+<p><strong>Impacte en població real:</strong></p>
 
+<p>A Pallejà (~12.000 habitants), això representa aproximadament:</p>
+
+<div class="formula-block">
+\[
+0.08 \times 12 = 0.96 \approx 1 \text{ cas extra al dia}
+\]
+</div>
+
+<p>A escala poblacional, això equival a aproximadament <strong>8 casos addicionals per cada 100.000 habitants</strong>.</p>
         <!-- PAS 3 -->
         <div class="step">
             <div class="step-header"><span class="step-num">3</span><span style="font-size: 1.4rem; font-weight: 600;">Impacte retardat (lags) i patrons</span></div>
@@ -310,7 +332,7 @@
                 \text{Excés diari} = (\text{incidència pic} - \text{incidència basal}) \times \frac{\text{població}}{1000}
                 \]
             </div>
-            <p>Per a Pallejà (~12.000 habitants), un pic de 5.27 suposa unes \( (5.27-1.38)\times 28 \approx 109 \) consultes extra aquell dia. Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
+            <p>Per a Pallejà (~12.000 habitants), un pic de 8.20 suposa unes \( (8.20-1.77)\times 28 \approx 109 \) consultes extra aquell dia. Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
         </div>
 
         <!-- PAS 5 -->
@@ -325,6 +347,46 @@
             <p style="margin-top: 20px;">Els mesos d'hivern (gener-febrer) concentren els valors més alts tant de NO₂ com d'incidència, confirmant el patró estacional típic de les infeccions respiratòries agreujades per contaminació.</p>
         </div>
     </div>
+    <div class="step">
+    <div class="step-header">
+        <span class="step-num">6</span>
+        <span style="font-size: 1.4rem; font-weight: 600;">Model de Poisson</span>
+    </div>
+
+    <p>Per modelitzar el nombre de casos diaris s’utilitza una distribució de Poisson.</p>
+
+    <div class="formula-block">
+    \[
+    P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
+    \]
+    </div>
+
+    <p>Per dies amb baixa contaminació (\(\lambda = 1.77\)):</p>
+
+    <div class="formula-block">
+    \[
+    P(X = 2) = 0.2663
+    \]
+    </div>
+
+    <p>Per dies amb alta contaminació (\(\lambda = 1.85\)):</p>
+
+    <div class="formula-block">
+    \[
+    P(X = 2) = 0.269
+    \]
+    </div>
+
+    <p>Això indica una probabilitat d’un 26–27% de tenir exactament 2 casos per 1000 habitants.</p>
+
+    <p>Probabilitat combinada:</p>
+
+    <div class="formula-block">
+    \[
+    0.2663 \cdot 0.269 + 0.269 \cdot (1 - 0.269)
+    \]
+    </div>
+</div>
 
     <!-- RESUM FINAL I CONCLUSIONS -->
     <div class="card">
@@ -343,7 +405,7 @@
         <hr style="margin: 24px 0 12px; border-top: 2px solid #bdd6ca;">
         <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
             <span style="background: #1b4e3f; color: white; padding: 6px 24px; border-radius: 60px;">📍 Dades reals processades · Pallejà</span>
-            <span class="badge">🌫️ NO₂ · NO · NOX · SO₂ · 5108 dies</span>
+            <span class="badge">🌫️ NO₂ · NO · NOX · SO₂ · 4935 dies</span>
             <span style="margin-left: auto; font-style: italic;">Anàlisi estil OMS · Educatiu</span>
         </div>
         <p class="footnote" style="margin-top: 18px;">
