@@ -378,6 +378,9 @@
     </div>
 
     <p>Això indica una probabilitat d’un 26–27% de tenir exactament 2 casos per 1000 habitants.</p>
+        <h3>📌 Correcció metodològica: no és el teorema de Bayes</h3>
+
+<p>El càlcul realitzat no correspon al teorema de Bayes, sinó a la <strong>llei de la probabilitat total</strong>, ja que estem combinant dos escenaris possibles (alta i baixa contaminació) ponderats pels seus pesos poblacionals.</p>
 
         <h3>❓ Per què no s’ha utilitzat X = 1?</h3>
 
@@ -392,14 +395,18 @@
 </ul>
 
 <p>A més, en aquest context, comparar X = 2 entre escenaris (baixa vs alta contaminació) permet mesurar millor l’efecte de l’exposició ambiental.</p>
-
+<p><strong>Nota metodològica:</strong> En el model de Poisson, λ representa la mitjana de casos diaris per cada 1000 habitants, diferenciada segons el nivell de contaminació.</p>
     <p>Probabilitat combinada:</p>
 
-    <div class="formula-block">
-    \[
-    0.2663 \cdot 0.269 + 0.269 \cdot (1 - 0.269)
-    \]
-    </div>
+<div class="formula-block">
+\[
+P(X=2)=0.2663\cdot0.731 + 0.269\cdot0.269
+\]
+\[
+P(X=2)\approx 0.267
+\]
+</div>
+        <p><strong>Interpretació:</strong> La probabilitat global de presentar exactament 2 casos per cada 1000 habitants és aproximadament del 26.7%. Aquest valor combina tant els dies amb alta com baixa contaminació, reflectint el comportament real del sistema.</p>
 </div>
 
     <!-- RESUM FINAL I CONCLUSIONS -->
