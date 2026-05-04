@@ -437,7 +437,17 @@ P(X=2)\approx 0.267
     <!-- Nota final MathJax -->
     <div style="text-align: right; opacity: 0.7; font-size: 0.8rem;">Equacions renderitzades amb MathJax · Problema epidemiològic ambiental</div>
 </div>
-
+<h1>Model DLNM (Models no lineals de retard distribuït</h1>
+<p>Aquest model matemàtic va ser creat per Gasparrini <i>et al.</i> (2010) </p>
+    <p>Esl contaminants tenen un temps de retard respecte a la salut, es a dir, no hi ha un efecte inmediat sempre.
+    Moltes vegades tenen tenir un efecte més tard.</p>
+    <p>Aquests models no són lineals perquè si fos lineal siginidicaria que u augment de containació provoca
+    un augment proporcional de casos respiratoris. Encara que sembla lògic no és exactaent així perquè un l'augment de 5
+    &micro;g/m<sup>3</sup> de NO<sub>2</sub> no es el mateix si augmenta de 5 a 10 com si augmenta de 40 a 45, es a dir, és una corba i no es una recta.  
+        Els retards s'anomenen LAG i poden ser igual a 0 (no hi ha retard) o igual a qualsevol números entre 0 i 14. Si LAG es igual a 14
+        significa que passa en dos setmanes entre el PIC de contaminant i el PIG de problemes de salud</p>
+<p>Gasparrini, A., Armstrong, B., & Kenward, M. G. (2010). Distributed lag non-linear models. 
+    Statistics in Medicine, 29 (21), 2224–2234. doi:<a href="https://doi.org/10.1002/sim.3940"><a/> </p>
 <script>
     window.addEventListener('load', function() {
         if (window.MathJax) {
