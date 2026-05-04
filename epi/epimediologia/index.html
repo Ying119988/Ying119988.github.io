@@ -204,6 +204,16 @@
     <!-- ENUNCIAT DEL PROBLEMA AMB DADES CONCRETES -->
     <div class="card">
         <h2>📋 Enunciat complet · dades proporcionades</h2>
+        <h3>🌫️ Contaminació atmosfèrica (variables principals)</h3>
+
+<p>Aquesta secció conté els principals contaminants utilitzats en l’anàlisi epidemiològica:</p>
+
+<ul>
+    <li><strong>NO₂:</strong> diòxid de nitrogen (principal contaminant analitzat)</li>
+    <li><strong>NO:</strong> òxid nítric</li>
+    <li><strong>NOX:</strong> òxids de nitrogen totals</li>
+    <li><strong>SO₂:</strong> diòxid de sofre</li>
+</ul>
         <p><strong>Fitxer:</strong> <span class="small-mono">dades1.csv</span> (5108 dies vàlids). Columnes: data, incidencia_1000, pm2.5, pm10, no2, nox, o3, so2.</p>
         <div class="data-grid">
             <div class="stat-box"><span class="stat-number">4934</span><div class="stat-label">Dies analitzats</div></div>
@@ -220,21 +230,6 @@
         </div>
         <p class="footnote" style="margin-top: 0;">* Dies amb registre: NO₂ 4863, NO 4861, NOX 3684, SO₂ 4847</p>
         <h3>🌫️ Freqüència de superació del límit OMS</h3>
-        <h3>🌫️ Anàlisi de superacions de contaminació (NO₂)</h3>
-
-<p>Límit OMS: 25 µg/m³</p>
-
-<p>Dies amb superació:</p>
-
-<p><strong>167 / 4742 = 0.035 → 3.5%</strong></p>
-
-<p>El 3.5% dels dies superen el límit recomanat per l’OMS.</p>
-
-<h3>⚖️ Límit legal UE</h3>
-
-<p>Superacions observades: 16 dies en 14 anys.</p>
-
-<p>La normativa permet fins a 18 superacions anuals, per tant no s’excedeix el límit legal global, però hi ha episodis puntuals elevats.</p>
 
 <p>El NO₂ supera el límit recomanat per l'OMS (25 µg/m³) en molts dies del període analitzat.</p>
 
@@ -310,45 +305,10 @@
 </div>
 
 <p>A escala poblacional, això equival a aproximadament <strong>8 casos addicionals per cada 100.000 habitants</strong>.</p>
-        Risc relatiu=1,06
-Risc atribuit= 0.11
-Exces no genera 0,11 casos de infeccions respiratoris extra cada 100 habitants
-Pallejà=12.000 habitants
-0.11/100 per 12= 13 casos a pallejà
-11 casos infeccions respiratoris de mes cada 100.000 habitants
-AR=5,66%
-el 5,66% del casos d’infeccions respiratories són causades per l’excés No
 
-excessos de no
-No= 3,6 ug
-limit Oms=25 ug/m3
-excedencies= 167
-dies anlitzat= 4742
-167/4742= 0,035
-el 3,5 % dels dies es suponen els 25ug/m3 recomanats com a màxim per l’organització Mundial a la salut. Hem calculat amb R el limit diari de 50 ug/m3 (límit legal UE) i  ens ha donat 0=16/24 dies en 14 anys (2012-2025) es supera el límit legal de la UE. La llei europeu diu que es pot superar 18 vegades cada any.
+<p>Si la contaminacio de no2 és baixa hi ha un 26,7% de probabilitat que es doni 2 casos cada 1000 habitants.</p>
+        
 
-model de poisson
- 
-P(x=2)=(1.78 elevat 2 per e elevat -1.78) dividit entre 2!= 0,2671
-P(x=2)=(1.89 elevat 2 per e elevat -1.89) dividit entre 2!= 0,2699
-
-Si la contaminacio de no2 és baixa hi ha un 26,7% de probabilitat que es doni 2 casos cada 1000 habitants.
-
-Probabilitat al cap 2 pacient= 0,2671 · 0,2699 + 0,2699 · 0.732 ( 1- 0,2699)= 0,2692
-
-probabilitat 2 casos de infeccions respiratories cada 100 habitants  a partir d'un model matemàtic de Poisson que ha tingut en compte les dades diaries de 14 anys (2012-2025) de infeccions i contaminants atmosferics (No2, No, etc) als 2 centres d'atenció primaria a Pallejà i sabem que les dades XPVCA (xarxa de prevenció i vigilància de la contaminació atmosfèrica) i sivic( sistema d’informació per a la vigilància d’infeccions a catalunya), així doncs la probabilitat de 2 infeccions respiratories per cada 1000 pallejallencs és d’un 26,99 % si els nivells de no són baixos, és a dir, inferiors al límit de la OMS( 25mg/m3) en canvi si el nivell de contaminació de no és superior a la de Oms tindrem 26,7 % de probabilitat . si el director de salut de pallejà em pregunta quina probabilitat ha de tenir en un dia qualsevol, he d’aplicar el teorema de Bayes i fer una mitjana ponderada amb els dies que hi ha contaminació alta i els dies que hi ha contaminació baixa. 
-Busquem les dades de Pallejà:
-High exposure no: 167dies
-Low exposure no: 4575dies
-Total: 4742 dies
-% dels dies amb baixa i alta exposició
-High %: 167/4742 · 100= 3,52%
-Low%: 4575/4742 · 100= 96,48%
-el director de salut ens diu que una incidencia del 1% es preocupant.
-k= 10 casos respiratories cada 1000
-P(x=k)=(y elevat k divitit entre k!) per e elevat -y
-P(x=10)= (1,78 elevat 10 divit entre 10!) per e elevat -1,78
-P(x=10)= (1,89 elevat 10 divit entre 10!) per e elevat -1,89
 
         <!-- PAS 3 -->
         <div class="step">
@@ -434,18 +394,7 @@ P(x=10)= (1,89 elevat 10 divit entre 10!) per e elevat -1,89
     </div>
 
     <p>Això indica una probabilitat d’un 26–27% de tenir exactament 2 casos per 1000 habitants.</p>
-        <h3>🧮 Probabilitat global (model ponderat)</h3>
-
-<p>Dies alta exposició: 167 / 4742 = 3.52%</p>
-<p>Dies baixa exposició: 96.48%</p>
-
-<div class="formula-block">
-P = 0.2671 · 0.2699 + 0.2699 · 0.732
-</div>
-
-<p><strong>P ≈ 0.2692 → 26.92%</strong></p>
-
-<p>Això representa la probabilitat global de tenir 2 casos per 1000 habitants en un dia qualsevol.</p>
+    
         <h3>📌 Correcció metodològica: no és el teorema de Bayes</h3>
 
 <p>El càlcul realitzat no correspon al teorema de Bayes, sinó a la <strong>llei de la probabilitat total</strong>, ja que estem combinant dos escenaris possibles (alta i baixa contaminació) ponderats pels seus pesos poblacionals.</p>
@@ -476,17 +425,7 @@ P(X=2)\approx 0.267
 </div>
         <p><strong>Interpretació:</strong> La probabilitat global de presentar exactament 2 casos per cada 1000 habitants és aproximadament del 26.7%. Aquest valor combina tant els dies amb alta com baixa contaminació, reflectint el comportament real del sistema.</p>
 </div>
-<h3>🔺 Casos extrems (k = 10)</h3>
 
-<p>Model de Poisson:</p>
-
-<div class="formula-block">
-P(X=10)=\frac{1.78^{10} e^{-1.78}}{10!}
-<br>
-P(X=10)=\frac{1.89^{10} e^{-1.89}}{10!}
-</div>
-
-<p>Aquests valors són molt poc probables i representen episodis crítics de salut pública.</p>
     <!-- RESUM FINAL I CONCLUSIONS -->
     <div class="card">
         <h2>📝 Resum i conclusions del problema</h2>
