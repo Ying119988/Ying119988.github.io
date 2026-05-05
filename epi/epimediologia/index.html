@@ -293,6 +293,23 @@
             </div>
             <p>Interval de confiança del 95% per al RR: \([1.03,\,1.06]\), \(p<0.001\).</p>
             <p><strong>Conclusió:</strong> RR > 1 indica un efecte nociu. El 3.85% de la incidència en dies amb NO₂ elevat és atribuïble a la superació del límit OMS. Això equival a un excés de 0.08 casos per cada 1000 habitants i dia.</p>
+            <h3>🌫️ NO (òxid nítric)</h3>
+
+<p>El NO també mostra una associació amb la incidència d’infeccions respiratòries.</p>
+
+<div class="formula-block">
+RR = 1.06<br>
+AR = 0.11 casos / 1000 habitants<br>
+AR% = 5.66%
+</div>
+
+<p><strong>Interpretació:</strong> El 5.66% dels casos d’infeccions respiratòries són atribuïbles a l’excés de NO.</p>
+
+<p><strong>Impacte poblacional (Pallejà, 12.000 habitants):</strong></p>
+
+<div class="formula-block">
+0.11 × 12 = 1.32 ≈ 13 casos addicionals
+</div>
         </div>
 <p><strong>Impacte en població real:</strong></p>
 
@@ -394,6 +411,25 @@
     </div>
 
     <p>Això indica una probabilitat d’un 26–27% de tenir exactament 2 casos per 1000 habitants.</p>
+        <h3>🌫️ Model de Poisson · NO (òxid nítric)</h3>
+
+<p>Per dies amb baixa contaminació de NO (\(\lambda = 1.78\)):</p>
+
+<div class="formula-block">
+\[
+P(X = 2) = 0.2671
+\]
+</div>
+
+<p>Per dies amb alta contaminació de NO (\(\lambda = 1.89\)):</p>
+
+<div class="formula-block">
+\[
+P(X = 2) = 0.2699
+\]
+</div>
+
+<p><strong>Interpretació:</strong> La probabilitat de tenir exactament 2 casos per 1000 habitants és molt similar a la del NO₂, situant-se entre el 26.7% i el 27.0% segons el nivell de contaminació.</p>
     
         <h3>📌 Correcció metodològica: no és el teorema de Bayes</h3>
 
