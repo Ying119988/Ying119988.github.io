@@ -233,6 +233,14 @@ Looking at pollution, weather, and health data together helps us better understa
         so we chose the nearest meteorological station that is Vallirana. The data structure is based on semi-hourly data that is, data every 30 minutes from 2009. 
         Data included: temperature, relative humidity, pressure, wind direction, wind speed, solar irradiance
       </li>
+      <h1>What is the origen of air pollution in Pallejà</h1>
+      <p>To know the origen of air pollution in Pallejà is easy with RStudio.</p>
+      <p>We only need data in columns named ws for wind speed, wd for wind direction and to choose a pollutant e.g.: NO<sub>2</sub> these are conditions of the openair library in order to create a pollution rose 
+        with the instruction <code>pollutionRose(cityall, pollutant="no2")</code>
+</p>
+      <p>As you can see in the following image Pallejà air pollution comes from Barcelona city area.</p>
+      <img src="pollutionRose.no2.png">
+      <img src="googlemaps.png">
       <li>
         The meteorological dataset obtained from the XEMA Meteocat station in Vallirana contains several atmospheric variables recorded at semi-hourly intervals. 
         However, the variables corresponding to temperature (X30) and relative humidity (X31) contain missing values for the analysed period and were therefore excluded from the descriptive analysis.
